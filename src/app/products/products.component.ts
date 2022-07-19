@@ -9,11 +9,13 @@ import { ProductService } from './product.service';
 })
 export class ProductsComponent implements OnInit {
   products: ProductType[] = [];
+
   constructor(private readonly productService: ProductService) {}
 
   ngOnInit(): void {
     this.productService.fetchProducts().subscribe((response: any) => {
       this.products = response.data.product;
+      console.log({ response });
     });
   }
 }

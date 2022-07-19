@@ -1,1 +1,12 @@
-<div *ngFor="let pr of products">{{ pr?.name }}</div>
+<!-- <div *ngFor="let pr of products">{{ pr.name }}</div> -->
+
+<mat-grid-list cols="4" rowHeight="2:1">
+  <mat-grid-tile
+    *ngFor="let product of products"
+    [routerLink]="['/product/', product.id]"
+    style="cursor: pointer"
+    >{{ product.name }} - ({{ product.id }})
+  </mat-grid-tile>
+</mat-grid-list>
+
+<!-- <app-product></app-product> -->
