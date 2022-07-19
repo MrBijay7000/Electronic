@@ -8,14 +8,25 @@ import { HeaderComponent } from './header/header.component';
 
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { ProductsComponent } from './products/products.component';
+import { ProductComponent } from './products/product/product.component';
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [AppComponent, GridComponet, HeaderComponent],
+  declarations: [
+    AppComponent,
+    GridComponet,
+    HeaderComponent,
+    ProductsComponent,
+    ProductComponent,
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatGridListModule,
     MatToolbarModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
